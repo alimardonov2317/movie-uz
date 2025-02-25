@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+   --color-primary: #c61f1f;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+#admin-sidebar .active {
+   background: dodgerblue;
+}
+
+#group-tab .active {
+   color: dodgerblue;
+   text-decoration: underline;
+}
+
+.container {
+   margin: 0 auto;
+   max-width: 1380px;
+   padding-left: 16px;
+   padding-right: 16px;
+}
+.header__container {
+   max-width: 1180px;
+   padding: 0 16px;
+}
+
+.anticon svg {
+   color: red;
+}
+.scroll::-webkit-scrollbar {
+   height: 0;
+}
+.ant-empty-description {
+   color: red;
+}
+.width__webkit {
+   width: -webkit-fill-available;
+}

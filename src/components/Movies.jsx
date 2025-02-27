@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addWishlist, removeWishlist } from "../redux/features/favouriteSlice";
 import { FaBookmark, FaRegBookmark } from "react-icons/fa6";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import noImage from "../assets/no-image.jpg";
 
 const Movies = ({ data, isLoading }) => {
     const dispatch = useDispatch();
@@ -11,14 +14,10 @@ const Movies = ({ data, isLoading }) => {
     return (
         <div className="grid grid-cols-5 gap-4 mt-[40px] max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2">
             {isLoading
-                ? Array.from({ length: 10 }).map((_, index) => (
-                    <div key={index}
-                        className="border border-gray-300 dark:border-gray-800 dark:bg-gray-700 animate-pulse">
-                        <div className="h-[400px] bg-gray-400" />
-                        <div className="p-1.5">
-                            <div className="h-6 bg-gray-500 w-3/4 mb-2" />
-                            <div className="h-4 bg-gray-500 w-1/2" />
-                        </div>
+                ? Array.from({ length: 20 }).map((_, index) => (
+                    <div key={index} className="rounded-[12px] max-[480px]:mb-9 mb-1 relative max-[480px]:h-[300px]">
+                        <Skeleton height={300} style={{ borderRadius: '12px' }} />
+                        <Skeleton height={20} width={`80%`} style={{ marginTop: '10px', borderRadius: '4px' }} />
                     </div>
                 ))
                 : data?.results?.map((movie) => {
@@ -31,7 +30,7 @@ const Movies = ({ data, isLoading }) => {
                                 className="h-[350px] max-[480px]:h-[300px] block bg-gray-400 rounded-[12px] ">
                                 <img
                                     className="w-full h-full object-cover rounded-[12px]"
-                                    src={import.meta.env.VITE_IMAGE_URL + movie.poster_path}
+                                    src={movie.poster_path ? import.meta.env.VITE_IMAGE_URL + movie.poster_path : noImage}
                                     alt={movie.title}
                                 />
                             </Link>

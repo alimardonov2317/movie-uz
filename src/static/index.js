@@ -34,6 +34,7 @@ export const navbarItems = [
     id: 4,
     icon: FaSearch,
     name: "Search",
+    path: "/search",
   },
 ];
 

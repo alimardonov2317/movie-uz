@@ -38,3 +38,28 @@
 .width__webkit {
    width: -webkit-fill-available;
 }
+.detail__image {
+   width: 300px;
+}
+
+.ant-btn {
+   background-color: #a1a1a1;
+   padding: 21px;
+}
+.ant-input-wrapper {
+   margin: 0 auto;
+   max-width: 300px;
+}
+.ant-input {
+   width: 100%;
+}
+.swiper-button-next::after {
+   color: red;
+}
+.swiper-button-prev::after {
+   color: red;
+}
+
+.ant-pagination-item:hover {
+   background: white;
+}

@@ -68,7 +68,7 @@ const Search = () => {
                     data?.results?.map((movie) => (
                         <div
                             key={movie.id}
-                            className="text-black dark:text-white dark:bg-gray-950 p-2 rounded-lg shadow-lg hover:scale-105 transition-transform"
+                            className="text-black dark:text-white  p-2 rounded-lg transition-transform"
                         >
                             <Link to={`/movie/${movie.id}`}>
                                 <img
@@ -77,9 +77,9 @@ const Search = () => {
                                     className="w-full aspect-[2/3] object-cover rounded-md"
                                 />
                             </Link>
-                            <p className="line-clamp-1 text-center mt-2 text-sm font-medium">
+                            <h3 className="text-xl font-medium line-clamp-1">
                                 {movie.title}
-                            </p>
+                            </h3>
                         </div>
                     ))}
             </div>

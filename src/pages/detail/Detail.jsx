@@ -25,12 +25,12 @@ const Detail = () => {
                     alt=""
                 />
             </div>
-            <div className="flex gap-3.5 my-10">
+            <div className="flex gap-3.5 my-10 max-[768px]:flex-col max-[768px]:text-center max-[768px]:mx-auto">
                 <div className="contents w-[200px]">
                     <img
                         src={`${import.meta.env.VITE_IMAGE_URL}${data?.poster_path}`}
                         alt={data?.title}
-                        className="detail__image md:w-1/3 rounded-lg shadow-lg mb-4 md:mb-0"
+                        className="detail__image md:w-1/3 rounded-lg shadow-lg mb-4 md:mb-0 max-[768px]:mx-auto"
                     />
                 </div>
                 <div className="">
@@ -51,19 +51,19 @@ const Detail = () => {
                         <span className="font-semibold">Genres: </span>
                         {data?.genres.map((genre) => genre.name).join(", ")}
                     </p>
-                    <div className="flex items-center mb-2">
-                        <p className="text-base md:text-lg mr-2">
-                            <span className="font-semibold">Rating: </span>
+                    <div className="flex items-center mb-2 max-[768px]:inline-flex max-[768px]:gap-2">
+                        <p className="text-base md:text-lg mr-2 max-[768px]:mx-auto">
+                            <span className="font-semibold ">Rating: </span>
                             {data?.vote_average} / 10
                         </p>
-                        <FaImdb className="text-[#F3B700] text-3xl" />
+                        <FaImdb className="text-[#F3B700] text-3xl max-[768px]:flex" />
                     </div>
                     <p className="text-lg md:text-xl mb-4">
                         <span className="font-semibold">
                             Total accumulated votes:  {data?.vote_count}
                         </span>
                     </p>
-                    <button className="px-24 py-4 cursor-pointer bg-white text-[#C61F1F] font-bold text-2xl flex items-center gap-2.5 rounded-2xl mt-5">Watch <FaPlay className="mt-1" /></button>
+                    <button className="max-[768px]:mx-auto px-24 py-4 cursor-pointer bg-white text-[#C61F1F] font-bold text-2xl flex items-center gap-2.5 rounded-2xl mt-5">Watch <FaPlay className="mt-1" /></button>
                 </div>
             </div>
 

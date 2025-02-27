@@ -36,7 +36,7 @@ const Hero = () => {
               <img
                 src={`${import.meta.env.VITE_IMAGE_URL}${movie.backdrop_path}`}
                 alt={movie.title}
-                className="w-[1360px] object-cover rounded-[12px] z-10"
+                className="w-[1360px] object-cover rounded-[12px] z-10 h-[640px]"
               />
               <div className="absolute bottom-5  text-center w-full  p-4">
                 <h3 className="text-2xl font-bold text-white">

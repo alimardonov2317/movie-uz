@@ -74,7 +74,7 @@ const AllMovies = () => {
         )}
       </div>
 
-      {!data?.total_results && !isLoading && <Empty />}
+      {!data?.total_results && !isLoading && <Empty description={<span style={{ color: 'red' }}>No saved movies</span>} />}
 
       <div className="container grid grid-cols-5 gap-4 mt-[40px] max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2">
         {isLoading ? (

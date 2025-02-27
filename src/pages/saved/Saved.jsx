@@ -13,7 +13,9 @@ const Saved = () => {
   return (
     <div className="container mx-auto max-w-[1308px] text-black dark:text-white mt-5">
       {wishlist.length === 0 ? (
-        <div className="text-center mt-7"><Empty description="No saved movies" className="text-gray-300" /></div>
+        <div className="text-center mt-7">
+          <Empty description={<span style={{ color: 'red' }}>No saved movies</span>} />
+        </div>
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {wishlist.map((movie) => (

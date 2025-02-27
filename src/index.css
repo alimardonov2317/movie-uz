@@ -63,3 +63,7 @@
 .ant-pagination-item:hover {
    background: white;
 }
+
+.ant-empty-description {
+   color: red;
+}

@@ -32,7 +32,7 @@ const AllMovies = () => {
       params.set("page", p);
     }
     setParams(params);
-    window.scrollTo(0, 0); // Sahifaning yuqori qismiga o'tish
+    window.scrollTo(0, 0);
   };
 
   const handleChangeGenre = (id) => {

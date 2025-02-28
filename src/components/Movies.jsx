@@ -35,14 +35,14 @@ const Movies = ({ data, isLoading }) => {
                                 />
                             </Link>
                             <button
-                                className="absolute top-2 right-2 text-white bg-black/60 rounded-full p-1.5"
+                                className="absolute top-2 right-2 text-white bg-red-600 rounded-full p-1.5"
                                 onClick={() =>
                                     isInWishlist
                                         ? dispatch(removeWishlist(movie.id))
                                         : dispatch(addWishlist(movie))
                                 }
                             >
-                                {isInWishlist ? <FaBookmark className="text-red-500" size={19} /> : <FaRegBookmark size={19} />}
+                                {isInWishlist ? <FaBookmark className="text-white" size={19} /> : <FaRegBookmark size={19} />}
                             </button>
                             <div className="p-1.5">
                                 <h3
